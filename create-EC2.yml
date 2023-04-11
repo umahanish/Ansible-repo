@@ -1,6 +1,9 @@
 ---
  - name:  provisioning a new EC2 using Ansible playbook
    hosts: localhost
+   vars:
+   ansible_python_interpreter: /usr/bin/python3.7
+   shell: python3 --version
    connection: local
    gather_facts: False
    tags: provisioning
@@ -14,7 +17,7 @@
      count: 1
      region: eu-west-2
      security_group: ec2-security-group
-   
+        
    tasks:
 
      - name: Create a security group
