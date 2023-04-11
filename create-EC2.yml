@@ -6,13 +6,13 @@
    tags: provisioning
 
    vars:
-     keypair: mySep22Key
+     keypair: studyit-keypair
      instance_type: t2.micro
-     image: ami-0ee23bfc74a881de5
+     image: ami-0cd8ad123effa531a
      wait: yes
      group: webserver
      count: 1
-     region: us-east-1
+     region: eu-west-2
      security_group: ec2-security-group
    
    tasks:
