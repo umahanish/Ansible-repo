@@ -1,14 +1,13 @@
 ---
  - name:  provisioning a new EC2 using Ansible playbook
    hosts: localhost
-   vars:
-   ansible_python_interpreter: /usr/bin/python3.7
-   shell: python3 --version
    connection: local
    gather_facts: False
    tags: provisioning
 
    vars:
+     ansible_python_interpreter: /usr/bin/python3.7
+     shell: python3 --version 
      keypair: studyit-keypair
      instance_type: t2.micro
      image: ami-0cd8ad123effa531a
